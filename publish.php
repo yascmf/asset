@@ -220,7 +220,7 @@ class FileUtil {
 function publish_asset($public = 'public') {
     $base = dirname(__FILE__).'/';
     $fu = new FileUtil();
-    $fu->copyDir($base.'source/lib', $base.''.$public.'/lib', true);
+    $fu->copyDir($base.'resource/lib', $base.''.$public.'/lib', true);
 }
 
 $public = (isset($argv[1]) && ($argv[1] !== 'public')) ? '_public' : 'public';
