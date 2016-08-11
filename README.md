@@ -1,4 +1,4 @@
-# YASCMF/Asset
+# YASCMF/ASSET
 
 >   本仓库为 `YASCMF` 公共静态资源库。为了加快 `YASCMF` 运行速度，特意剥离出公共类库，你可以将此仓库部署到独立域名。
 
