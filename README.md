@@ -10,11 +10,11 @@
 
 ## 发布资源
 
-原始静态资源位于 `source` 目录下，你可以在此调整原始资源。
+原始静态资源位于 `resource` 目录下，你可以在此调整原始资源。
 
 下载源码部署到服务器之后，绑定 `public` 为域名根目录，然后在终端中执行：
 
-```
+```bash
 git clone https://github.com/yascmf/asset.git asset
 cd asset
 php publish.php
@@ -24,13 +24,13 @@ php publish.php
 
 如果你想发布到新的临时目录，可携带 `public` 的参数，这样资源会被发布到 `_public` 下。
 
-```
+```bash
 php publish.php _public
 ```
 
 为了安全起见，静态资源站，请勿允许任何脚本语言执行权限。这里给出一份 `nginx` 虚拟主机配置文件：
 
-```
+```nginx
 server {
 listen 80;
 server_name example.org;
@@ -63,7 +63,7 @@ location ~* \.(eot|otf|ttf|woff|svg|woff2)$ {
 
 如果你已经部署此静态资源库到新的域名，请修改 `YASCMF` config 目录下 `site` 相关配置：
 
-```
+```php
         #静态资源CDN配置
         'cdn' => [
             //'on' or 'off'
