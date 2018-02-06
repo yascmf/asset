@@ -59,7 +59,7 @@ location ~* \.(eot|otf|ttf|woff|svg|woff2)$ {
 ## 相关配置
 
 如果你没有部署此静态库，可以使用 `YASCMF` 官方线上静态资源库：
-访问域名为： http://s2.ystatic.cn 或 https://s2.ystatic.cn 。
+访问域名为： http://s2.ystatic.cn (HTTPS站点不可用，使用的是 `WoSign` 免费证书，目前最新版 `Chrome` 浏览器不再信任。) 。
 
 如果你已经部署此静态资源库到新的域名，请修改 `YASCMF` config 目录下 `site` 相关配置：
 
@@ -68,7 +68,7 @@ location ~* \.(eot|otf|ttf|woff|svg|woff2)$ {
         'cdn' => [
             //'on' or 'off'
             'status'  => 'on',
-            'url'     => '//s2.ystatic.cn/',
+            'url'     => 'http://s2.ystatic.cn/',
 
             #匹配所有资源路径:
             //'pattern' => '/.*/i',
